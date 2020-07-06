@@ -1,0 +1,21 @@
+---
+version: "3.3"
+
+services:
+  primary:
+    hostname: 'pg-0'
+    image:  bitnami/postgresql-repmgr:12-debian-10
+    environment:
+     - REPMGR_PARTNER_NODES=pg-0,pg-1
+     - REPMGR_NODE_NAME=pg-0
+     - REPMGR_NODE_NETWORK_NAME=pg-0
+     - REPMGR_PRIMARY_HOST=pg-0
+     - REPMGR_PASSWORD=repmgrpass
+     - POSTGRESQL_PASSWORD=secretpass
+    volumes:
+     - ./data/:/bitnami/postgresql/
+     - ./conf.d/:bitnami/repmgr/conf/
+    network_mode: "host" 
+    extra_hosts:
+    - "pg-0:172.16.1.208"
+    - "pg-1:172.16.1.209"
