@@ -10,4 +10,4 @@ It should be noted that for more reliability of the system on the docker swarm b
 
 All you have to do is run Docker Compass on each of the nodes separately.
 
-Changes are also made to change the database and repmgr configuration from within the config directory.
+Changes are also made to change the database and repmgr configuration from within the con.d directory.
