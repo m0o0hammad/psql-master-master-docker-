@@ -1,6 +1,6 @@
-#####################################################################
+########################################
 Thanks to the strong Bitnami team for making the Doker version
-#####################################################################
+########################################
 
 Setup is done on two separate nodes on the docker bed.
 It should be noted that for more reliability of the system on the docker swarm bed or startup kube should not be done.
